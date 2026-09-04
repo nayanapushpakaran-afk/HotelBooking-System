@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Room Booking System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">🏨 Hotel Booking</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#booking">Book Room</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Our Hotel</h1>
+
+            <p>
+                Comfortable rooms, excellent service,
+                and easy online booking.
+            </p>
+
+            <a href="#rooms" class="button">
+                View Rooms
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+
+        <h2>Our Rooms</h2>
+
+        <div class="room-container">
+
+            <!-- Single Room -->
+            <div class="room-card">
+
+                <div class="room-image">
+                    🛏️
+                </div>
+
+                <h3>Single Room</h3>
+
+                <p>
+                    Comfortable room suitable for one guest.
+                </p>
+
+                <h4>₹1500 / night</h4>
+
+                <button onclick="selectRoom('Single', 1500)">
+                    Book Now
+                </button>
+
+            </div>
+
+
+            <!-- Double Room -->
+            <div class="room-card">
+
+                <div class="room-image">
+                    🛏️🛏️
+                </div>
+
+                <h3>Double Room</h3>
+
+                <p>
+                    Spacious room suitable for two guests.
+                </p>
+
+                <h4>₹2500 / night</h4>
+
+                <button onclick="selectRoom('Double', 2500)">
+                    Book Now
+                </button>
+
+            </div>
+
+
+            <!-- Deluxe Room -->
+            <div class="room-card">
+
+                <div class="room-image">
+                    🏨
+                </div>
+
+                <h3>Deluxe Room</h3>
+
+                <p>
+                    Premium room with additional comfort.
+                </p>
+
+                <h4>₹4000 / night</h4>
+
+                <button onclick="selectRoom('Deluxe', 4000)">
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking Section -->
+    <section id="booking">
+
+        <h2>Book Your Room</h2>
+
+        <div class="booking-form">
+
+            <label>Guest Name</label>
+
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Enter your name"
+            >
+
+
+            <label>Guest ID</label>
+
+            <input
+                type="number"
+                id="guestId"
+                placeholder="Enter guest ID"
+            >
+
+
+            <label>Contact Number</label>
+
+            <input
+                type="text"
+                id="contact"
+                placeholder="Enter contact number"
+            >
+
+
+            <label>Room Type</label>
+
+            <select id="roomType">
+
+                <option value="Single">
+                    Single
+                </option>
+
+                <option value="Double">
+                    Double
+                </option>
+
+                <option value="Deluxe">
+                    Deluxe
+                </option>
+
+            </select>
+
+
+            <label>Check-in Date</label>
+
+            <input
+                type="date"
+                id="checkIn"
+            >
+
+
+            <label>Check-out Date</label>
+
+            <input
+                type="date"
+                id="checkOut"
+            >
+
+
+            <button onclick="calculateBill()">
+                Calculate Bill
+            </button>
+
+        </div>
+
+
+        <!-- Bill -->
+        <div id="bill" class="bill">
+
+            <h3>Booking Summary</h3>
+
+            <p id="billDetails">
+                Enter your details to calculate the bill.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            📞 +91 9876543210
+        </p>
+
+        <p>
+            ✉️ hotelbooking@example.com
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Hotel Room Booking System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
